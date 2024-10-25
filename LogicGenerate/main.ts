@@ -1,8 +1,8 @@
 import { generateEquation } from './logic/generate.ts'
 
 console.log(generateEquation({
-    countOperationsParams: 2,
+    countOperationsParams: 1,
     operationsParams: {
-        sum: true
+        operations: ['+', '-', '/']
     }
 }))
