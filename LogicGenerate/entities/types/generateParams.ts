@@ -4,5 +4,12 @@ export type generateParams = {
     diaX: [number, number],
     countOperationsParams: number,
     operationsParams: operationsParams,
-    diaParams: [number, number],
+    generateStack: {
+        {
+            dia: [number,number],
+            haveX: boolean,
+            value: string,
+            withBrackets: boolean
+        }
+    }
 }

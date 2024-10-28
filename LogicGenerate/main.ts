@@ -13,5 +13,25 @@ console.log(generateEquation({
             type: "/",
             haveX: false,
         },]
+    },
+    generateStack: {
+        a: {
+            dia: [-500,500],
+            haveX: false,
+            value: '',
+            withBrackets: true,
+        },
+        b: {
+            dia: [-500,500],
+            haveX: true,
+            value: '',
+            withBrackets: false,
+        },
+        c: {
+            dia: [-500,500],
+            haveX: true,
+            value: '',
+            withBrackets: true,
+        }
     }
 }))
