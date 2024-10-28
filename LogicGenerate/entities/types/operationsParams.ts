@@ -1,3 +1,6 @@
 export type operationsParams = {
-    operations: string[]
+    operations: {
+        type: string,
+        haveX:  boolean,
+    }[]
 }

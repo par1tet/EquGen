@@ -29,17 +29,27 @@
         let indexOperation = Math.floor(Math.random() * operations.length);
         let operation = operations[indexOperation];
         console.log(operation);
-        generateStack[item].value += ` ${operation} ${randint(generateStack[item].dia, 2)}${generateStack[item].haveX ? "x" : ""}`;
+        console.log(generateStack[item].haveX && operation.haveX);
+        generateStack[item].value += ` ${operation.type} ${randint(generateStack[item].dia, 2)}${generateStack[item].haveX && operation.haveX ? "x" : ""}`;
       }
     }
-    return `${generateStack.a.value}x + ${generateStack.b.value} = ${generateStack.c.value}`;
+    return `(${generateStack.a.value})x + ${generateStack.b.value} = ${generateStack.c.value}`;
   }
 
   // main.ts
   console.log(generateEquation({
     countOperationsParams: 1,
     operationsParams: {
-      operations: ["+", "-", "/"]
+      operations: [{
+        type: "+",
+        haveX: true
+      }, {
+        type: "-",
+        haveX: true
+      }, {
+        type: "/",
+        haveX: false
+      }]
     }
   }));
 })();

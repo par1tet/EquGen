@@ -33,10 +33,11 @@ export function generateEquation(params: generateParams): string {
             let indexOperation = Math.floor(Math.random() * operations.length)
             let operation = operations[indexOperation]
             console.log(operation)
+            console.log(generateStack[item].haveX && operation.haveX)
 
-            generateStack[item].value += ` ${operation} ${randint(generateStack[item].dia, 2)}${generateStack[item].haveX ? 'x' : ''}`
+            generateStack[item].value += ` ${operation.type} ${randint(generateStack[item].dia, 2)}${(generateStack[item].haveX && operation.haveX) ? 'x' : ''}`
         }
     }
     
-    return `${generateStack.a.value}x + ${generateStack.b.value} = ${generateStack.c.value}`
+    return `(${generateStack.a.value})x + ${generateStack.b.value} = ${generateStack.c.value}`
 }
