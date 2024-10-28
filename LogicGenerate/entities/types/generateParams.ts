@@ -11,5 +11,6 @@ export type generateParams = {
             value: string,
             withBrackets: boolean
         }
-    }
+    },
+    countNumbersAfterPoint: number
 }

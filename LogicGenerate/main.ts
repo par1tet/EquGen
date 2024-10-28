@@ -33,5 +33,6 @@ console.log(generateEquation({
             value: '',
             withBrackets: true,
         }
-    }
+    },
+    countNumbersAfterPoint: 1
 }))
